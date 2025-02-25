@@ -6,7 +6,7 @@
 - [Teleport Configuration](https://goteleport.com/docs/reference/config/)
 
 
-## Auth service
+### Auth service
 
 ```bash
 vim /etc/teleport.yaml
@@ -20,7 +20,7 @@ auth_service:
   proxy_listener_mode: multiplex
 ```
 
-## Proxy service
+### Proxy service
 
 ```bash
 vim /etc/teleport.yaml
@@ -37,7 +37,7 @@ proxy_service:
     email: zafar@zafar.com
 ```
 
-## Logs
+### Logs
 
 ```bash
 vim /etc/teleport.yaml
@@ -53,7 +53,7 @@ teleport:
       extra_fields: [level, timestamp, component, caller]
 ```
 
-## Connection limits
+### Connection limits
 
 ```bash
 vim /etc/teleport.yaml
@@ -66,7 +66,7 @@ teleport:
       max_users: 250
 ```
 
-## Storage
+### Storage
 
 ```bash
 mkdir ~/.aws
@@ -98,7 +98,7 @@ teleport:
 
 ## Users
 
-Add admin user
+### Add admin user
 
 ```bash
 tctl users add teleport-admin --roles=editor,access --logins=root

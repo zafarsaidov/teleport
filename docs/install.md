@@ -6,7 +6,7 @@
 - [Installation](https://goteleport.com/docs/installation/)
 - [Uninstallation](https://goteleport.com/docs/admin-guides/management/admin/uninstall-teleport/)
 
-## Generate config file
+### Generate config file
 ```bash
 teleport configure -o file
 ```
