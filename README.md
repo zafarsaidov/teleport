@@ -5,4 +5,5 @@
 - [Install](./docs/install.md)
 - [Configuration](./docs/configuration.md)
 - [PostgreSQL](./docs/psql.md)
+- [Minio](./docs/minio.md)
 
