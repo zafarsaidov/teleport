@@ -92,7 +92,7 @@ teleport:
     
     conn_string: "postgresql://teleport:teleport@localhost:5432/teleport?sslmode=disable"
 
-    audit_sessions_uri: "s3://myteleport?endpoint=http://localhost:9000&insecure=true&disablesse=true&region=uzb-1"
+    audit_sessions_uri: "s3://teleport?endpoint=http://localhost:9000&insecure=true&disablesse=true&region=uzb-1"
 ```
 
 
