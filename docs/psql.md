@@ -5,13 +5,19 @@
 
 ## PSQL
 
+### Install docker
+
 ```bash
 apt install docker.io
 ```
 
+## Create Dockerfile for customizing psql
+
 ```bash
 vim ~/Dockerfile
 ```
+
+## Content of Dockerfile
 
 ```dockerfile
 FROM postgres:16
@@ -19,14 +25,19 @@ RUN apt-get update
 RUN apt-get install -y postgresql-16-wal2json
 ```
 
+## Build docker image
+
 ```bash
 docker build -t psql:16 ~
 ```
 
+## Create unit file for psql
 
 ```bash
 vim /etc/systemd/system/psql.service
 ```
+
+## Content of unit file
 
 ```bash
 [Unit]
@@ -60,6 +71,8 @@ WantedBy=multi-user.target
 WantedBy=docker.service
 ```
 
+## Start and enable psql service
+
 ```bash
 systemctl daemon-reload
 systemctl enable psql
@@ -67,16 +80,18 @@ systemctl start psql
 systemctl status psql
 ```
 
+## Command for connecting to psql
+
 ```bash
 docker exec -it psql psql -U postgres
 ```
 
+## SQL queries for creating teleport role and change wal level
 
 ```sql
 CREATE ROLE teleport WITH PASSWORD 'teleport' LOGIN REPLICATION CREATEDB;
 ALTER SYSTEM SET wal_level = 'logical';
-
--- CREATE DATABASE teleport WITH OWNER teleport;
 ```
+
 ---
 [Main menu](../README.md)

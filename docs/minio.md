@@ -3,9 +3,14 @@
 
 ---
 
+# Install Minio
+
+## Create unit file
 ```bash
 vim /etc/systemd/system/minio.service
 ```
+
+## Content of unit file
 
 ```shell
 [Unit]
@@ -40,6 +45,8 @@ WantedBy=multi-user.target
 WantedBy=docker.service
 ```
 
+## Start and enable service
+
 ```bash
 systemctl daemon-reload
 systemctl enable minio
@@ -48,6 +55,6 @@ systemctl status minio
 ```
 
 
-
 ---
 [Main menu](../README.md)
+

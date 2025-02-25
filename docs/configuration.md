@@ -20,7 +20,7 @@ auth_service:
   proxy_listener_mode: multiplex
 ```
 
-## SSL
+## Proxy service
 
 ```bash
 vim /etc/teleport.yaml
