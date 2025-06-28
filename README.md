@@ -1,4 +1,4 @@
-# Teleport nodes
+# Teleport notes
 
 [Teleport official documentation](https://goteleport.com/docs/)
 
